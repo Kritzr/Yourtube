@@ -1,0 +1,90 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+
+  <display-name>YourTube</display-name>
+
+  <!-- Welcome file list -->
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file> <!-- Default page when app is accessed -->
+  </welcome-file-list>
+
+  <!-- LoginServlet configuration -->
+  <servlet>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.yourtube.util.LoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/login</url-pattern> <!-- Maps the login URL -->
+  </servlet-mapping>
+
+  <!-- LogoutServlet configuration -->
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>com.yourtube.LogoutServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/logout</url-pattern> <!-- Maps the logout URL -->
+  </servlet-mapping>
+
+  <!-- HomeServlet configuration -->
+  <servlet>
+    <servlet-name>HomeServlet</servlet-name>
+    <servlet-class>com.yourtube.HomeServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>HomeServlet</servlet-name>
+    <url-pattern>/home</url-pattern> <!-- Maps to /home URL -->
+  </servlet-mapping>
+
+  <!-- SearchServlet configuration -->
+  <servlet>
+    <servlet-name>SearchServlet</servlet-name>
+    <servlet-class>com.yourtube.util.SearchServlet</servlet-class> <!-- Your SearchServlet -->
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>SearchServlet</servlet-name>
+    <url-pattern>/search</url-pattern> <!-- Maps to /search URL -->
+  </servlet-mapping>
+
+  <!-- VideoDetailsServlet configuration -->
+  <servlet>
+    <servlet-name>VideoDetailsServlet</servlet-name>
+    <servlet-class>com.yourtube.util.VideoDetails</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>VideoDetailsServlet</servlet-name>
+    <url-pattern>/videoDetails</url-pattern> <!-- Maps to /videoDetails URL -->
+  </servlet-mapping>
+
+  <!-- YouTubeService configuration (optional) -->
+  <servlet>
+    <servlet-name>YouTubeService</servlet-name>
+    <servlet-class>com.yourtube.util.YouTubeService</servlet-class> <!-- Handles YouTube API logic -->
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>YouTubeService</servlet-name>
+    <url-pattern>/youtubeService</url-pattern> <!-- Maps to /youtubeService URL -->
+  </servlet-mapping>
+
+  <!-- VideoPlaybackServlet configuration -->
+  <servlet>
+    <servlet-name>VideoPlaybackServlet</servlet-name>
+    <servlet-class>com.yourtube.util.VideoPlaybackServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>VideoPlaybackServlet</servlet-name>
+    <url-pattern>/play</url-pattern> <!-- Maps to /play URL -->
+  </servlet-mapping>
+
+</web-app>

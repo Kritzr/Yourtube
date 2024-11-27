@@ -1,0 +1,4 @@
+package com.yourtube.util;
+
+public class RegisterServlet {
+}
